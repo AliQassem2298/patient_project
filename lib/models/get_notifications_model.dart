@@ -1,4 +1,4 @@
-// models/transactions_response.dart
+// models/get_notifications_model.dart
 
 class GetNotificationsModel {
   final List<TransactionModel> transactions;
@@ -10,6 +10,7 @@ class GetNotificationsModel {
       return GetNotificationsModel(transactions: []);
     }
 
+    // نأخذ أول عنصر، وهو القائمة الداخلية
     final List<dynamic> innerList = json[0] is List ? json[0] : json;
 
     final List<TransactionModel> transactions = innerList

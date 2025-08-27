@@ -10,7 +10,7 @@ class GetPrescriptionsModel {
       return GetPrescriptionsModel(prescriptions: []);
     }
 
-    // نفترض أن البيانات هي: [[ {...}, {...} ]]
+    // نأخذ أول عنصر، وهو القائمة الداخلية
     final List<dynamic> prescriptionsList = json[0] is List ? json[0] : json;
     final List<Prescription> prescriptions =
         prescriptionsList.map((item) => Prescription.fromJson(item)).toList();

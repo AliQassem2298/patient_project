@@ -47,7 +47,7 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
 
   // مصفوفة بوليانية بسيطة لحالة الدفع
   final List<bool> _invoicePayments = [true, false, true, false];
-  
+
   // اللون الأساسي للتطبيق
   final Color _primaryColor = const Color(0xFF4CAF50);
 
@@ -55,7 +55,8 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ملف المريض الطبي', style: TextStyle(color: Colors.white)),
+        title: const Text('ملف المريض الطبي',
+            style: TextStyle(color: Colors.white)),
         backgroundColor: _primaryColor,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -71,11 +72,14 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
           children: <Widget>[
             const Text(
               'السجل الطبي للمريض',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black54),
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black54),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
-            
+
             // قسم العلاجات
             _buildTreatmentsSection(),
             const SizedBox(height: 24),
@@ -114,13 +118,16 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('التشخيص: ${treatment['diagnosis']}', style: const TextStyle(fontWeight: FontWeight.bold)),
+                    Text('التشخيص: ${treatment['diagnosis']}',
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     Text('المرض السابق: ${treatment['previousIllness']}'),
                     const SizedBox(height: 4),
-                    Text('العلاج الذي تم تلقيه: ${treatment['treatmentReceived']}'),
+                    Text(
+                        'العلاج الذي تم تلقيه: ${treatment['treatmentReceived']}'),
                     const SizedBox(height: 4),
-                    Text('هل يحتاج أشعة: ${treatment['radiologyNeeded'] ? 'نعم' : 'لا'}'),
+                    Text(
+                        'هل يحتاج أشعة: ${treatment['radiologyNeeded'] ? 'نعم' : 'لا'}'),
                     const Divider(height: 24),
                   ],
                 ),
@@ -131,7 +138,7 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
       ),
     );
   }
-  
+
   // دالة جديدة لاستعادة قسم الأدوية
   Widget _buildMedicationsSection() {
     return Card(
@@ -158,7 +165,8 @@ class _MedicalFilePageState extends State<MedicalFilePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('اسم الدواء: ${medication['name']}', style: const TextStyle(fontWeight: FontWeight.bold)),
+                      Text('اسم الدواء: ${medication['name']}',
+                          style: const TextStyle(fontWeight: FontWeight.bold)),
                       const SizedBox(height: 4),
                       Text('الطبيب المعالج: ${medication['doctor']}'),
                       const SizedBox(height: 4),

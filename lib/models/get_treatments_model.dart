@@ -5,13 +5,16 @@ class GetTreatmentsModel {
 
   GetTreatmentsModel({required this.records});
 
+  // ✅ توقع: json = [[{...}, {...}]]
   factory GetTreatmentsModel.fromJson(List<dynamic> json) {
-    // توقع أن الجواب هو قائمة تحتوي على قائمة
-    // json = [[{...}, {...}]]
-    if (json.isEmpty) return GetTreatmentsModel(records: []);
+    if (json.isEmpty) {
+      return GetTreatmentsModel(records: []);
+    }
 
-    final List<dynamic> firstItem = json[0] is List ? json[0] : json;
-    final List<MedicalRecordModel> records = firstItem
+    // نأخذ أول عنصر، وهو القائمة الداخلية
+    final List<dynamic> recordsJson = json[0] is List ? json[0] : json;
+
+    final List<MedicalRecordModel> records = recordsJson
         .map(
             (item) => MedicalRecordModel.fromJson(item as Map<String, dynamic>))
         .toList();
