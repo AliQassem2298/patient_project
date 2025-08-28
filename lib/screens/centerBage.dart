@@ -442,9 +442,9 @@ class _centerBageState extends State<centerBage> {
                       MaterialPageRoute(
                           builder: (context) => const TreatmentsScreen()),
                     ).then((_) {
-                      // ✅ بعد الدفع أو العودة: نُحدث عدد الإشعارات
                       if (mounted) {
                         setState(() {
+                          _balanceFuture = _balanceService.getBalance();
                           _unreadCountFuture =
                               _unreadService.unreadNotifications();
                         });

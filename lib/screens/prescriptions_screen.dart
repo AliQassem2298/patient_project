@@ -182,11 +182,11 @@ class _PrescriptionsScreenState extends State<PrescriptionsScreen> {
 
   Widget _buildMedicineItem(Medicine medicine) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 50,
-          height: 50,
+          width: 75,
+          height: 75,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: Colors.deepPurple[100],

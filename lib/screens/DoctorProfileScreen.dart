@@ -748,7 +748,6 @@ import 'package:patient_project/services/delete_comment_service.dart';
 import 'package:patient_project/services/add_ratings_service.dart';
 import 'package:patient_project/services/add_favorite_service.dart';
 import 'package:patient_project/services/remove_favorite_service.dart';
-import 'package:patient_project/models/massage_model.dart';
 
 class DoctorProfileScreen extends StatefulWidget {
   final int doctorId;

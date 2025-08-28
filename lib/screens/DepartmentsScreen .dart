@@ -61,6 +61,7 @@ class DepartmentsScreen extends StatelessWidget {
                   leading: Container(
                     width: 50,
                     height: 50,
+                    
                     decoration: BoxDecoration(
                       color: Colors.green.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(12),
