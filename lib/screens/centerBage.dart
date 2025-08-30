@@ -5,12 +5,12 @@ import 'package:patient_project/main.dart';
 import 'package:patient_project/models/email_model.dart';
 import 'package:patient_project/models/get_balance_model.dart';
 import 'package:patient_project/screens/DepartmentsScreen .dart';
-import 'package:patient_project/screens/LoginScreen.dart';
 import 'package:patient_project/screens/PatientAppointmentsScreen.dart';
 import 'dart:async';
 import 'package:patient_project/screens/PatientInfoPage.dart';
 import 'package:patient_project/screens/chronic_conditions_screen.dart';
 import 'package:patient_project/screens/favorites_screen.dart';
+import 'package:patient_project/screens/pages.dart';
 import 'package:patient_project/screens/prescriptions_screen.dart';
 import 'package:patient_project/screens/treatments_screen.dart';
 import 'package:patient_project/screens/notifications_screen.dart'; // ✅ جديد
@@ -20,11 +20,10 @@ import 'package:patient_project/services/get_prescriptions_service.dart';
 import 'package:patient_project/services/unread_notifications_service.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:patient_project/screens/MedicalFilePage.dart';
 
 class centerBage extends StatefulWidget {
   const centerBage({super.key});
-
+  static String id = '/centerBage';
   @override
   State<centerBage> createState() => _centerBageState();
 }
@@ -109,7 +108,7 @@ class _centerBageState extends State<centerBage> {
     if (mounted) {
       Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => LoginScreenN(),
         ),
         (Route<dynamic> route) => false,
       );
@@ -359,24 +358,24 @@ class _centerBageState extends State<centerBage> {
                     });
                   },
                 ),
-                ListTile(
-                  leading: const Icon(Icons.assignment),
-                  title: const Text('الملف الطبي'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MedicalFilePage()),
-                    ).then((_) {
-                      if (mounted) {
-                        setState(() {
-                          _unreadCountFuture =
-                              _unreadService.unreadNotifications();
-                        });
-                      }
-                    });
-                  },
-                ),
+                // ListTile(
+                //   leading: const Icon(Icons.assignment),
+                //   title: const Text('الملف الطبي'),
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //           builder: (context) => const MedicalFilePage()),
+                //     ).then((_) {
+                //       if (mounted) {
+                //         setState(() {
+                //           _unreadCountFuture =
+                //               _unreadService.unreadNotifications();
+                //         });
+                //       }
+                //     });
+                //   },
+                // ),
                 ListTile(
                   leading: const Icon(Icons.assignment),
                   title: const Text('السجل الطبي'),

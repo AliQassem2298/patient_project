@@ -16,8 +16,8 @@ String baseUrl = 'http://127.0.0.1:8000/api'; //////// windows
 // String baseUrlImage = 'http://192.168.27.48:8000';
 // String baseUrl = 'http://192.168.27.48:8000/api'; ///// mobilde
 
-// String baseUrlImage = 'https://3b01-185-177-125-71.ngrok-free.app';
-// String baseUrl = 'https://3b01-185-177-125-71.ngrok-free.app/api'; ///// server
+// String baseUrlImage = 'https://phplaravel-1514307-5818526.cloudwaysapps.com/';
+// String baseUrl = 'https://phplaravel-1514307-5818526.cloudwaysapps.com//'; ///// server
 
 class Api {
   Future<dynamic> get({

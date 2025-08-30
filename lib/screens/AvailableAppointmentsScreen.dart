@@ -1,11 +1,10 @@
 // available_appointments_screen.dart
 
 import 'package:flutter/material.dart';
-
-import 'package:patient_project/models/appointment_model.dart';
+import 'package:patient_project/models/ali_appointment_model.dart';
 import 'package:patient_project/services/Book%20Appointment%20service.dart';
 import 'package:patient_project/services/deleteAppointment%20service.dart';
-import 'package:patient_project/services/getavailableappointments_service.dart';
+import 'package:patient_project/services/getAvailableAppointments_service.dart';
 
 class AvailableAppointmentsScreen extends StatefulWidget {
   final int doctorId;
@@ -19,7 +18,7 @@ class AvailableAppointmentsScreen extends StatefulWidget {
 
 class _AvailableAppointmentsScreenState
     extends State<AvailableAppointmentsScreen> {
-  late Future<AppointmentModel> _appointmentsFuture;
+  late Future<AliAppointmentModel> _appointmentsFuture;
   final GetavailableappointmentsService _getAppointmentsService =
       GetavailableappointmentsService();
   final Bookappointmentservice _bookService = Bookappointmentservice();
@@ -87,7 +86,7 @@ class _AvailableAppointmentsScreenState
       ),
       body: RefreshIndicator(
         onRefresh: () async => _refreshAppointments(),
-        child: FutureBuilder<AppointmentModel>(
+        child: FutureBuilder<AliAppointmentModel>(
           future: _appointmentsFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {

@@ -1,7 +1,7 @@
 // screens/patient_appointments_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:patient_project/models/appointment_model.dart';
+import 'package:patient_project/models/ali_appointment_model.dart';
 import 'package:patient_project/services/deleteAppointment%20service.dart';
 
 import 'package:patient_project/services/pastappointments_service.dart';
@@ -20,8 +20,8 @@ class _PatientAppointmentsScreenState extends State<PatientAppointmentsScreen>
   late TabController _tabController;
 
   // بيانات المواعيد
-  final List<Appointment> _upcomingAppointments = [];
-  final List<Appointment> _pastAppointments = [];
+  final List<AliAppointment> _upcomingAppointments = [];
+  final List<AliAppointment> _pastAppointments = [];
 
   // حالة التحميل
   bool _loadingUpcoming = false;
@@ -154,7 +154,7 @@ class _PatientAppointmentsScreenState extends State<PatientAppointmentsScreen>
     }
   }
 
-  void _showCancelDialog(Appointment appointment) {
+  void _showCancelDialog(AliAppointment appointment) {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(

@@ -1,9 +1,9 @@
 // models/upcoming_appointments_model.dart
 
-import 'package:patient_project/models/appointment_model.dart';
+import 'package:patient_project/models/ali_appointment_model.dart';
 
 class UpcomingAppointmentsResponse {
-  final List<Appointment> appointments;
+  final List<AliAppointment> appointments;
   final int currentPage;
   final int lastPage;
   final int perPage;
@@ -23,7 +23,7 @@ class UpcomingAppointmentsResponse {
     // تحويل قائمة المواعيد
     final appointmentsList = json['appointments'] as List? ?? [];
     final appointments =
-        appointmentsList.map((item) => Appointment.fromJson(item)).toList();
+        appointmentsList.map((item) => AliAppointment.fromJson(item)).toList();
 
     return UpcomingAppointmentsResponse(
       appointments: appointments,

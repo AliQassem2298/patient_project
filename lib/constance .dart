@@ -40,8 +40,7 @@ ThemeData theme = ThemeData(
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       foregroundColor: const Color.fromARGB(255, 129, 237, 194),
-      side: const BorderSide(
-          color: Color.fromARGB(255, 129, 237, 194), width: 1.5),
+      side: const BorderSide(color: Color.fromARGB(255, 129, 237, 194), width: 1.5),
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
@@ -61,8 +60,7 @@ ThemeData theme = ThemeData(
     fillColor: Colors.white,
     contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
     labelStyle: TextStyle(color: Colors.grey[600]),
-    floatingLabelStyle:
-        const TextStyle(color: Color.fromARGB(255, 129, 237, 194)),
+    floatingLabelStyle: const TextStyle(color: Color.fromARGB(255, 129, 237, 194)),
   ),
   textTheme: const TextTheme(
     headlineMedium: TextStyle(

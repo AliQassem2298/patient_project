@@ -290,38 +290,38 @@ class _PatientInfoPageState extends State<PatientInfoPage> {
                     ),
                     const SizedBox(height: 24),
 
-                    // زر الحفظ أو التعديل
-                    _isEditing
-                        ? ElevatedButton.icon(
-                            onPressed: _updatePatientInfo,
-                            icon: const Icon(Icons.save),
-                            label: const Text('حفظ التغييرات'),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF4CAF50),
-                              foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            ),
-                          )
-                        : ElevatedButton.icon(
-                            onPressed: () {
-                              setState(() {
-                                _isEditing = true;
-                              });
-                            },
-                            icon: const Icon(Icons.edit),
-                            label: const Text('تعديل المعلومات'),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            ),
-                          ),
+                    // // زر الحفظ أو التعديل
+                    // _isEditing
+                    //     ? ElevatedButton.icon(
+                    //         onPressed: _updatePatientInfo,
+                    //         icon: const Icon(Icons.save),
+                    //         label: const Text('حفظ التغييرات'),
+                    //         style: ElevatedButton.styleFrom(
+                    //           backgroundColor: const Color(0xFF4CAF50),
+                    //           foregroundColor: Colors.white,
+                    //           padding: const EdgeInsets.symmetric(vertical: 16),
+                    //           shape: RoundedRectangleBorder(
+                    //             borderRadius: BorderRadius.circular(12),
+                    //           ),
+                    //         ),
+                    //       )
+                    //     : ElevatedButton.icon(
+                    //         onPressed: () {
+                    //           setState(() {
+                    //             _isEditing = true;
+                    //           });
+                    //         },
+                    //         icon: const Icon(Icons.edit),
+                    //         label: const Text('تعديل المعلومات'),
+                    //         style: ElevatedButton.styleFrom(
+                    //           backgroundColor: Colors.blue,
+                    //           foregroundColor: Colors.white,
+                    //           padding: const EdgeInsets.symmetric(vertical: 16),
+                    //           shape: RoundedRectangleBorder(
+                    //             borderRadius: BorderRadius.circular(12),
+                    //           ),
+                    //         ),
+                    //       ),
                   ],
                 ),
               ),

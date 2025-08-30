@@ -1,9 +1,9 @@
 import 'package:patient_project/helper/api.dart';
 import 'package:patient_project/main.dart';
-import 'package:patient_project/models/appointment_model.dart';
+import 'package:patient_project/models/ali_appointment_model.dart';
 
 class GetavailableappointmentsService {
-  Future<AppointmentModel> getavailableappointments({
+  Future<AliAppointmentModel> getavailableappointments({
     required int doctorId,
   }) async {
     Map<String, dynamic> data = await Api().post(
@@ -13,6 +13,6 @@ class GetavailableappointmentsService {
       },
       token: sharedPreferences!.getString('token'),
     );
-    return AppointmentModel.fromJson(data);
+    return AliAppointmentModel.fromJson(data);
   }
 }
