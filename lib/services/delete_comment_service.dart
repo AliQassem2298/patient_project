@@ -1,3 +1,5 @@
+// ignore_for_file: missing_required_param
+
 import 'package:patient_project/helper/api.dart';
 import 'package:patient_project/main.dart';
 
